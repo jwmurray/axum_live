@@ -1,0 +1,101 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'axum_live'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=axum_live",
+                    "--package=axum_live"
+                ],
+                "filter": {
+                    "name": "axum_live",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'axum_live'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=axum_live",
+                    "--package=axum_live"
+                ],
+                "filter": {
+                    "name": "axum_live",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'quick_dev'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=quick_dev",
+                    "--package=axum_live"
+                ],
+                "filter": {
+                    "name": "quick_dev",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'quick_dev'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=quick_dev",
+                    "--package=axum_live"
+                ],
+                "filter": {
+                    "name": "quick_dev",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'quick_dev'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=quick_dev",
+                    "--package=axum_live"
+                ],
+                "filter": {
+                    "name": "quick_dev",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
